@@ -2,7 +2,7 @@ import {hashCode} from "util.string";
 
 const debug = require("debug")("util.memoize");
 
-const _cache = {};
+let _cache = {};
 const separator: string = "@@";
 
 /**
@@ -56,6 +56,31 @@ export function memoize(...args: any[]): any {
 		_cache[id] = ret;
 		return ret;
 	}
+}
+
+/**
+ * A more traditional wrapper for a function to be memoized.  This returns a
+ * reference to a function that can be called over and over instead of using
+ * memoize directly.  The reference can then be saved and called over and over.
+ * @param fn {function} - the function to memoize
+ * @return {function} a memoized version of the function
+ */
+export function memoizeFn(fn: any): () => any {
+	return (...args: any[]) => {
+		args.push(fn);
+		return memoize(...args);
+	};
+}
+
+/**
+ * Resets the internal cache
+ */
+export function memoizeReset() {
+	for (const key of Object.keys(_cache)) {
+		_cache[key] = null;
+	}
+
+	_cache = {};
 }
 
 export default memoize;

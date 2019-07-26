@@ -1,9 +1,13 @@
 import assert from "power-assert";
-import memoize from "./index";
+import memoize, {memoizeFn, memoizeReset} from "./index";
 
 function adder(x: number, y: number): number {
 	return x + y;
 }
+
+afterAll(() => {
+	memoizeReset();
+});
 
 test("Memoize a simple, anonymous function call", () => {
 	for (let i = 0; i < 5; i++) {
@@ -46,4 +50,13 @@ test("Call memoize without a memoized function", () => {
 	}).toThrowError(
 		"Last parameter to memoize function must be the function to memoize."
 	);
+});
+
+test("Test traditional memoize function formation", () => {
+	const memoizedAdder = memoizeFn(adder);
+
+	for (let i = 0; i < 5; i++) {
+		const ret = memoizedAdder(3, 3);
+		expect(ret).toBe(6);
+	}
 });
