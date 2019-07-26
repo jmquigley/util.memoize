@@ -50,10 +50,8 @@ export function memoize(...args: any[]): any {
 	debug("hash string: %O -> %o", s, id);
 
 	if (id in _cache) {
-		debug("getting value from cache");
 		return _cache[id];
 	} else {
-		debug("new value, adding to cache");
 		const ret = fn(...args);
 		_cache[id] = ret;
 		return ret;

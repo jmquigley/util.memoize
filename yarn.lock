@@ -2709,9 +2709,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.191:
-  version "1.3.200"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.200.tgz#78fb858b466269e8eb46d31a52562f00c865127f"
-  integrity sha512-PUurrpyDA74MuAjJRD+79ss5BqJlU3mdArRbuu4wO/dt6jc3Ic/6BDmFJxkdwbfq39cHf/XKm2vW98XSvut9Dg==
+  version "1.3.201"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.201.tgz#b516e941baf01a7cf8abd33af537a39e1e0096db"
+  integrity sha512-aCTPIfY1Jvuam5b6vuWRjt1F8i4kY7zX0Qtpu5SNd6l1zjuxU9fDNpbM4o6+oJsra+TMD2o7D20GnkSIgpTr9w==
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -7099,10 +7099,10 @@ util.promisify@^1.0.0:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
 
-util.string@^0.0.32:
-  version "0.0.32"
-  resolved "https://registry.yarnpkg.com/util.string/-/util.string-0.0.32.tgz#a491d4b45959219c97b1a8264711aa7b22221741"
-  integrity sha512-ihaE5M2ACuCFnC8XBaZDtlyECSMj6qwoiNzmHNE6WzcZAl4rmqPm+tUASDZNSjkB8sPHlvrsIWhdN7/gsL9xaQ==
+util.string@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/util.string/-/util.string-0.0.33.tgz#efa611ca6feaf793bff1ce02739aa777674f521f"
+  integrity sha512-fozz5WQIAodcQgwpBnLjoftz4dELCojmz67vUDWLECm3hJ+l8Kd+XdgT/RBVCZ84vx/7kkWuWumWFBrmvIguGA==
 
 util@0.10.3:
   version "0.10.3"
