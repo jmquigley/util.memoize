@@ -41,8 +41,10 @@ export function memoize(...args: any[]): any {
 		);
 	}
 
-	let s: string = args.map((it: any) => JSON.stringify(it)).join(separator);
-	s += `${separator}${fn.toString()}`;
+	const s: string = args
+		.map((it: any) => JSON.stringify(it))
+		.join(separator)
+		.concat(`${separator}${fn.toString()}`);
 	const id: number = hashCode(s);
 
 	debug("hash string: %O -> %o", s, id);

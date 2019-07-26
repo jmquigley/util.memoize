@@ -22,6 +22,16 @@ test("Memoize an embedded function call", () => {
 	}
 });
 
+test("Test a simple call with no parameters", () => {
+	const ret = memoize(() => console.log("test"));
+	expect(ret).toBe(undefined);
+});
+
+test("Test a simple call with null parameter", () => {
+	const ret = memoize(null, () => console.log("test"));
+	expect(ret).toBe(undefined);
+});
+
 test("Use invalid parameters", () => {
 	expect(() => {
 		memoize();
