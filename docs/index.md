@@ -4,9 +4,8 @@
 <dt><a href="#memoize">memoize(args)</a> ⇒ <code>any</code></dt>
 <dd><p>Used to cache the results of an expensive function call, where the same
 parameters to the function will always give the same return (idempotent)</p>
-<pre><code class="lang-javascript">import memoize from &quot;util.memoize&quot;;
-const ret = memoize(3, 3, (x: number, y: number) =&gt; {return x + y});
-</code></pre>
+<pre><code class="language-javascript">import memoize from &quot;util.memoize&quot;;
+const ret = memoize(3, 3, (x: number, y: number) =&gt; {return x + y});</code></pre>
 <p>e.g. the memoize can be called over and over again, but the given
 function is only executed the first time it is called.  All subsequent
 calls use a cached return value.</p>
